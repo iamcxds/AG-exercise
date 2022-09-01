@@ -17,7 +17,6 @@
 \def\Hom{\mathrm{Hom}}
 \def\Ab{\mathrm{Ab}}
 \def\Mod#1{#1\mathrm{Mod}}
-%\def\colim{\mathrm{colim}}
 \def\PSh{\mathrm{PSh}}
 \DeclareMathOperator{\colim}{colim}
 \DeclareMathOperator{\coker}{coker}
@@ -32,7 +31,7 @@
 \end{center}
 \vskip0.6cm
 \begin{enumerate}[1.]
-\item (filtered colimit) commute finite limit and tensor\\
+\item (filtered (co)limits) \\
 A category $I$ is called filtered if it satisfies the conditions below.
 \begin{enumerate}[(i)]
     \item  $I$ is non-empty,
@@ -40,22 +39,35 @@ A category $I$ is called filtered if it satisfies the conditions below.
     \item for any parallel morphisms $f,g: i \rightrightarrows  j$, there exists a morphism $h: j \to
     k$ such that $h \circ  f = h \circ g$.
 \end{enumerate}
-And the functor from the filtered category to $C$ is called the filtered system of $C$, and the colimit of a filtered system is called the filtered colimit.
+A functor from the filtered category $I$ to $C$ is called a filtered system of $C$, and the colimit of a filtered system is called the filtered colimit.
 \begin{enumerate}
     \item Let $M(i)=M_i$ be a filtered system of $\Mod{R}$(or $\mrm{Set}$) indexed by $I$, Show that $\colim_I M_i\cong \sqcup M_i/ \sim$, where $M_i \ni x \sim y \in M_j$ if there exists $k \in I, s: i \to k$ and $ t: j \to k$
-    with $ M(s)(x) = M(t)(y)$. (Also check $\sim$ is indeed an equivalence relation)
-    \item Let $I$ be a filtered category and let $J$ be a finite category. Giving a functor $F: I\times J \to \Mod{R}$, Show that $\colim_I\lim_J F(i,j)\cong\lim_J\colim_I F(i,j)$
+    with $ M(s)(x) = M(t)(y)$. (Also check $\sim$ that is indeed an equivalence relation).
+    \item Let $I$ be a filtered category and let $J$ be a finite category. Given a functor $F: I\times J \to \Mod{R}$, show that $\colim_I\lim_J F(i,j)\cong\lim_J\colim_I F(i,j).$
 \end{enumerate}
 
 \item
 \begin{enumerate}
-    \item Show that every poset $(P,\leq)$ can be defined as a category. Figure out what are the objects and morphisms.
-    \item Let $ \mathcal{N}_{\leq} $ be the category defined by the poset $ (\bb{N},\leq)$ and let $p$ be a prime number. Now giving two functors: \\$I_p: \mathcal{N}_{\leq} \to \mrm{Ab} $ where $I_p(n)=\Zmd{p^n}$ and $I_p(n\leq m): x\in \Zmd{p^n} \mapsto p^{m-n}x\in \Zmd{p^m}$ ;
-    \\ $R_p: \mathcal{N}_{\leq}^{\mrm{op}} \to \mrm{Ab} $ where $R_p(n)=\Zmd{p^n}$ and $R_p(n\leq m): x \in \Zmd{p^m} \mapsto x \mod p^n \in \Zmd{p^n}$.
-    \\ Check these two functors are well-defined.
-    \item Show that $\colim_{\mathcal{N}_{\leq}}\  I_p(n) = \bZ[1/p]/\bZ $ where $\bZ[1/p]$ is the localization of $\bZ$ by $\{p^n\}$.
-    \item Let $\lim_{\mathcal{N}_{\leq}}  R_p(n) = \bZ_p$. Show that $\Hom_{\Ab}(\bZ_{(p)}/\bZ ,\bZ_{(p)}/\bZ )\cong \bZ_p$. (Actually, the $\bZ_p$ here is the ring of $p$-adic integers.)
-    \item Let $ \mathcal{N}_{\div} $ be the category defined by the poset $ (\bb{N},\mid )$(i.e. the poset of divisibility). We can similarly define functors $I :mathcal{N}_{\div} \to \mrm{Ab}$ and $R_p: \mathcal{N}_{\div}^{\mrm{op}} \to \mrm{Ab} $ where $I(n)=R(n)=\Zmd{n}$, etc. Show that $\colim_{\mathcal{N}_{\div}}\ I(n) \cong \bb{Q}/\bZ$ and $\lim_{\mathcal{N}_{\div}} R(n) = \hat{\bZ} \cong \prod _p \bZ_p \cong \Hom_{\Ab}(\bb{Q}/\bZ,\bb{Q}/\bZ)$. (Compare this to the fact that $\Hom_{\mrm{TopGrp}}(\bb{R}/\bZ\cong \bb{S}^1,\bb{S}^1)\cong \bZ$)
+    \item Show that every poset $(P,\leq)$ can be turned into a category. Figure out what the objects and morphisms are.
+    \item Let $ \mathcal{N}_{\leq} $ be the category defined by the poset $ (\bb{N},\leq)$ and let $p$ be a prime number. Consider the following two functors: \\$I_p: \mathcal{N}_{\leq} \to \mrm{Ab} $ where $I_p(n)=\Zmd{p^n}$ and 
+    \[
+    I_p(n\leq m): x\in \Zmd{p^n} \mapsto p^{m-n}x\in \Zmd{p^m} ;
+    \]
+    $R_p: \mathcal{N}_{\leq}^{\mrm{op}} \to \mrm{Ab} $ where $R_p(n)=\Zmd{p^n}$ and 
+    \[
+    R_p(n\leq m): x \in \Zmd{p^m} \mapsto x \mod p^n \in \Zmd{p^n}.
+    \]
+    \\ Check that these two functors are well-defined.
+    \item Show that $\colim_{\mathcal{N}_{\leq}}\  I_p(n) \cong \bZ[1/p]/\bZ $ where $\bZ[1/p]$ is the localization of $\bZ$ at the multiplicative system $\{p^n\vert n\in \mathbb{N}\}$.
+    \item Let $\lim_{\mathcal{N}_{\leq}}  R_p(n) := \bZ_p$, the ring of $p$-adic integers. Show that 
+    \[
+    \Hom_{\Ab}(\bZ_{(p)}/\bZ ,\bZ_{(p)}/\bZ )\cong \bZ_p.
+    \] 
+    \item Let $ \mathcal{N}_{\div} $ be the category defined by the poset $ (\bb{N},\mid )$(i.e. the poset of divisibility). We can similarly define functors $I :\mathcal{N}_{\div} \to \mrm{Ab}$ and $R_p: \mathcal{N}_{\div}^{\mrm{op}} \to \mrm{Ab} $ where $I(n)=R(n)=\Zmd{n}$, etc. Show that $\colim_{\mathcal{N}_{\div}}\ I(n) \cong \bb{Q}/\bZ$ and 
+    \[
+    \lim_{\mathcal{N}_{\div}} R(n) := \hat{\bZ} \cong \prod _p \bZ_p \cong \Hom_{\Ab}(\bb{Q}/\bZ,\bb{Q}/\bZ).
+    \] 
+    %(Compare this to the fact that $\Hom_{\mrm{TopGrp}}(\bb{R}/\bZ\cong \bb{S}^1,\bb{S}^1)\cong \bZ$)
 \end{enumerate}
 \item (Yoneda lemma) 
 \begin{enumerate}
@@ -65,9 +77,13 @@ And the functor from the filtered category to $C$ is called the filtered system 
     \item Show that $y$ is fully faithful.
 \end{enumerate}
 
-\item In category $\Mod{R}$
+\item (the category $\Mod{R}$)
 \begin{enumerate}
-    \item Show that $-\otimes_R M$ is the left adjoint of $\Hom(M,-)$, use this to conclude that $-\otimes_R M$ commutes with all colimit.
+    \item Show that $-\otimes_R M$ is the left adjoint of $\Hom(M,-)$, use this to conclude that $-\otimes_R M$ commutes with all colimits.
+    \item Let $S$ be a multiplicative system, define the filtered system $R_s\cong R, \forall s\in S$ and $a_{s,st}= t\cdot : R_s\to R_{st}$ given by multiplying $t$. Show that 
+    \small
+    \[\underset{S}{\colim} R_s \cong \{(r,s)\in R\times S\}/\{(r,s)\sim (r',s'),  \mrm{iff}\ \exists t\in S, \mrm{s.t.}\  trs'= tr's\in R \}\]
+    and $\colim_S R_s \cong S^{-1}R$. Use this to show $S^{-1}R$ is flat in $\Mod{R}$
     \item Show that the filtered colimit of flat modules is again flat. In particular, the filtered colimits of finite free modules are flat. (In fact, the converse is also true.)
     \item Show that $\Zmd{n}$ is not flat.
 \end{enumerate}
@@ -75,7 +91,7 @@ And the functor from the filtered category to $C$ is called the filtered system 
 \begin{enumerate}
     \item Let $A_i$ be a system indexed by $I$ in a category $C$ and let $X\in C$, construct the natural morphism $d: \colim_I y(A_i)\to  y( \colim_I A_i) $, in particular, \[d(X):\colim_I\Hom_C(X,A_i) \to \Hom_C(X,\colim_I A_i) \]
     \item Let $C$ be the category of topological space $\mrm{Top}$, and let $I=\mathcal{N}_{\leq}$ where $A_n=(-n,n) \subset  \bb{R}$. Show that $d(X)$ is a bijection if $X$ is compact. What if $X$ is not compact?
-    \item Let $C$ be the $\Mod{R}$ and let $A_i$ be a filtered system. Show that $d(M)$ are bijections for all filtered systems, iff $M$ is finitely presented(i.e. there is a short exact sequence $R^n\to R^m\to M\to 0$ with $n,m$ finite).(Such $M$ is also called a compact object.)
+    \item Let $C$ be the $\Mod{R}$ and let $A_i$ be a filtered system. Show that $d(M)$ are bijections for all filtered systems, iff $M$ is finitely presented (i.e. there is a short exact sequence $R^n\to R^m\to M\to 0$ with $n,m$ finite). (Such $M$ is also called a compact object.)
 \end{enumerate}
 
 \item (Snake lemma) Let
@@ -104,7 +120,7 @@ And the functor from the filtered category to $C$ is called the filtered system 
 \ar@{-}"p1";"p2"|!{"2,3";"3,3"}\hole
 }
 \]
-be a commuting diagram in $\Mod{R}$ such that the middle two rows are exact sequences. Then there is a long exact sequence of kernels and cokernels of the form
+be a commuting diagram in $\Mod{R}$ such that the middle two rows are exact sequences. Then prove that there is a long exact sequence of kernels and cokernels of the form
 \[0\dashrightarrow \ker(a)  \to \ker(b) \to \ker(c) \stackrel{\partial}{\to}
   \coker(a) \to \coker(b) \to \coker(c)\dashrightarrow 0.\]
 
