@@ -1,0 +1,59 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{amsthm,amsmath,amsfonts,epsfig,amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{xy}
+\usepackage{graphics}
+\xyoption{all}
+\pagestyle{empty}
+
+\def\spec#1{\mathrm{Spec}(#1)}
+\def\bb#1{\mathbb{#1}}
+\def\bZ{\mathbb{Z}}
+\def\Zmd#1{\bZ/#1\bZ}
+\def\mrm#1{\mathrm{#1}}
+\def\Hom{\mathrm{Hom}}
+\def\Ab{\mathrm{Ab}}
+\def\Mod#1{#1\mathrm{Mod}}
+\def\PSh{\mathrm{PSh}}
+\DeclareMathOperator{\colim}{colim}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\Spec}{Spec}
+\newcommand*\pp{{\rlap{\('\)}}}
+
+\begin{document}
+
+
+{\small Algebraic geometry \hfill \today \\}
+\begin{center}
+\Huge Exercises 2
+\end{center}
+
+\vskip0.6cm
+Here we only consider the underlying topology space of the spectrum.
+\begin{enumerate}[1.]
+\item 
+\begin{enumerate}
+    \item Show that the maximal spectrum of $\Spec\bb{C}[x]$ is the complex plane $\bb{C}$ with finite complement topology.
+    \item Show that the maximal spectrum of $\Spec \bb{R}[x]$ is $\bb{C}$ quotiented by a $\Zmd{2}$ action.
+    \item Show that the closure of $(x^2+y^2+1)$ in $\Spec \bb{C}[x,y]$ is isomorphic to $\Spec \bb{C}[x,y]/(x^2+y^2+1)$, and whose maximal spectrum are \[\{(s,t)\in \bb{C}\times\bb{C}|s^2+t^2+1=0\}\] with finite complement topology. Then show that there is an isomorphism $i: \bb{C}^*(i.e.\bb{C}-
+    \{0\})\to \Spec \bb{C}[x,y]/(x^2+y^2+1)$
+\end{enumerate}
+\item Let $k$ be a field, find out what are the prime spectrum of the following rings, and the open sets of Zariski topology.
+\begin{enumerate}
+    \item  $\Spec k[x]/(x^2)$
+    \item  $\Spec k[[x]](:=\Spec \lim_n k[x]/(x^n))$
+    \item  $\Spec k[x]_{(x)}$
+    \item  $\Spec \bZ[x]$
+\end{enumerate}
+\item 
+
+
+
+
+\end{enumerate}
+\footnote{find also the exercises on https://github.com/iamcxds/AG-exercise}
+
+\end{document}
