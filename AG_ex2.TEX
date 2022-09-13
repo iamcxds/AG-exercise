@@ -32,21 +32,27 @@
 \end{center}
 
 \vskip0.6cm
-Here we only consider the underlying topology space of the spectrum.
+Here we only consider the underlying topological space of the spectrum. And the maximal spectrum is the subspace of maximal ideals.
 \begin{enumerate}[1.]
 \item 
 \begin{enumerate}
-    \item Show that the maximal spectrum of $\Spec\bb{C}[x]$ is the complex plane $\bb{C}$ with finite complement topology.
-    \item Show that the maximal spectrum of $\Spec \bb{R}[x]$ is $\bb{C}$ quotiented by a $\Zmd{2}$ action.
-    \item Show that the closure of $(x^2+y^2+1)$ in $\Spec \bb{C}[x,y]$ is isomorphic to $\Spec \bb{C}[x,y]/(x^2+y^2+1)$, and whose maximal spectrum are \[\{(s,t)\in \bb{C}\times\bb{C}|s^2+t^2+1=0\}\] with finite complement topology. Then show that there is an isomorphism $i: \bb{C}^*(i.e.\bb{C}-
-    \{0\})\to \Spec \bb{C}[x,y]/(x^2+y^2+1)$
+    \item Show that the maximal spectrum of $\Spec\bb{C}[x]$ is the complex plane $\bb{C}$ with cofinite topology.
+    \item Show that the maximal spectrum of $\Spec \bb{R}[x]$ is $\bb{C}$ quotiented by a $\Zmd{2}$ action with cofinite topology.
+    \item Show that the maximal spectrum of $\Spec \bb{C}[x,y]/(x^2+y^2+1)$ is 
+    \[\{(s,t)\in \bb{C}^2|s^2+t^2+1=0\}\] with cofinite topology. Then show that there is an isomorphism $i: \Spec \bb{C}[x,x^{-1}] \to \Spec \bb{C}[x,y]/(x^2+y^2+1)$
+    \item* Show that the maximal spectrum of $\Spec \bb{R}[x,y]/(x^2+y^2-1)$ consists of 
+    \[\{(s,t)\in \bb{R}^2|s^2+t^2=1\} \mrm{ \ and\ } \{ l\in lines(\bb{R}^2)|l\mrm{ \ not \ intersect\ with\ } s^2+t^2=1\} \] 
+    with cofinite topology.
+    
 \end{enumerate}
-\item Let $k$ be a field, find out what are the prime spectrum of the following rings, and the open sets of Zariski topology.
+\item Let $\mrm{GL}_n$ be $ \Spec \bZ[x_{11},\ldots,x_{1n},\ldots,x_{nn},\iota]/(\iota\mrm{det}(x)-1) $ where $\mrm{det}(x)$ is the polynomial of determine. Show that for ring $R$ \[\mrm{GL}_n(R):=\Hom_{Sch}(\Spec R, \mrm{GL}_n)\cong 
+\{\mrm{ invertible\ matrices\ with\ coefficient\ } R\} \]
+\item Let $k$ be a field, find out what are the prime spectra of the following rings, and the open sets of Zariski topology.
 \begin{enumerate}
     \item  $\Spec k[x]/(x^2)$
     \item  $\Spec k[[x]](:=\Spec \lim_n k[x]/(x^n))$
     \item  $\Spec k[x]_{(x)}$
-    \item  $\Spec \bZ[x]$
+    \item*  $\Spec \bZ[x]$
 \end{enumerate}
 \item 
 
@@ -54,6 +60,6 @@ Here we only consider the underlying topology space of the spectrum.
 
 
 \end{enumerate}
-\footnote{find also the exercises on https://github.com/iamcxds/AG-exercise}
+\footnote{find also the exercises on https://github.com/iamcxds/AG-exercise, you can skip the question with * if it is difficult.}
 
 \end{document}
