@@ -1,0 +1,73 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{amsthm,amsmath,amsfonts,epsfig,amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{xy}
+\usepackage{graphics}
+\xyoption{all}
+\pagestyle{empty}
+
+\def\spec#1{\mathrm{Spec}(#1)}
+\def\bb#1{\mathbb{#1}}
+\def\bZ{\mathbb{Z}}
+\def\Zmd#1{\bZ/#1\bZ}
+\def\mrm#1{\mathrm{#1}}
+\def\Hom{\mathrm{Hom}}
+\def\Ab{\mathrm{Ab}}
+\def\Mod#1{#1\mathrm{Mod}}
+\def\PSh{\mathrm{PSh}}
+\DeclareMathOperator{\colim}{colim}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\Spec}{Spec}
+
+\newcommand*\pp{{\rlap{\('\)}}}
+
+\begin{document}
+
+
+{\small Algebraic geometry \hfill September 21, 2022 \\}
+\begin{center}
+\Huge Exercises 3
+\end{center}
+
+\vskip0.6cm
+\footnote{find also these exercises on https://github.com/iamcxds/AG-exercise, you can skip the question with * if it is difficult.}
+
+\begin{enumerate}[1.]
+\item Let $R$ be a ring and for any ideal $J$, we denote $V(J)$ for the set of prime ideals containing $J$. Now for any subset $S$ of $\Spec R$, we define $I(S)= \cap_{\mathfrak{p}\in S}\mathfrak{p}$. Let $A$ (resp. $B$) be the category of ideals of $R$ ( resp. subsets of $\Spec R$), whose morphisms are given by inclusion(i.e. $\Hom(X,Y)=\{*\}$ if $X\subset Y$, and be $\emptyset$ otherwise).
+\begin{enumerate}
+    \item Show that $V:A^{op}\to B$ and $I:B^{op}\to A$ are well-defined functors. And furthermore, Show that $\Hom_A(J,I(S))\cong \Hom_B(S,V(J))$ 
+    \item Let $\mathfrak{n}$ be the ideal of nilpotent elements, show that for any prime ideal $\mathfrak{p} $,  $\mathfrak{n}\subset\mathfrak{p} $ and $\mathfrak{n}\subset I(\Spec R)$.
+    \item For any non-nilpotent elements $f\in R$, let $R_f$ be the localization of $R$ with $\{f^i\}$. Show that \[\Spec R_f\cong \{\mathfrak{p}\ prime| f\notin \mathfrak{p}\}\] is nonempty. Then conclude that $\mathfrak{n}= I(\Spec R)$
+    \item Define the radical of an ideal $J$ to be $\sqrt{J}:=\{x\in R| \exists n\in \bb{N}, x^n\in J \}$. Show that $V(I(S))=\bar{S}$, the closure in $\Spec R$, and $I(V(J))=\sqrt{J}$.
+    \item An ideal $J$ is a radical ideal if $J=\sqrt{J}$. Show that there is a bijection between the closed subsets of $\Spec R$ and the radical ideals of $R$.
+    \item* Show that $S$ is closed irreducible, iff $S=V(\mathfrak{p})$ for $\mathfrak{p}$ prime, thus there is a bijection between the irreducible closed subsets of $\Spec R$ and the points of $\Spec R$.
+    \item Show that there is a bijection between the irreducible components of $\Spec R$ and the minimal(with respect to inclusion) prime ideals $R$.
+\end{enumerate}
+\item \begin{enumerate}
+    \item Show that for Noetherian space $X$, any open subset is quasi-compact.
+    \item* Show that for Noetherian ring $R$, there are only finitely many minimal prime ideals. Then show that the elements of minimal prime ideals are zero divisors.
+\end{enumerate}
+\item We will show that every sheaf is actually a sheaf of "functions". Let $X$ be a topological space, an etale space $(E,p)$ over $X$ is a topological space $E$ with a local homeomorphism $p:E\to X$(i.e. $\forall x\in E, \exists$ neighborhood $U\ni x$, such that $p|_U$ is a homeomorphism).
+\begin{enumerate}
+    \item For any open subset $U \subset X$, we define the sections:
+    \[ \Gamma_E(U) = \{f:U\to p^{-1}(U)\subset E| p\circ f=\mrm{id}_U\}
+        \]
+    Check that $\Gamma_E$ is a well-defined sheaf on $X$
+    \item Let $\mathcal{P}$ be a presheaf on $X$, we define an etale space $(L(\mathcal{P}),p)$ as follow:
+    \[L(\mathcal{P})=\coprod _{x\in X} \mathcal{P}_x , p:(x, f\in \mathcal{P}_x) \mapsto x\in X\]
+    where $\mathcal{P}_x$ is the stalk. And the topology of $L(\mathcal{P}) $ is given by the basis $\{V_f\}_{f\in \mathcal{P}(U) }$, where 
+    \[ V_f=\{(x\in U, f_x \in \mathcal{P}_x)\in L(\mathcal{P})\}\]
+    Check that $L(\mathcal{P})$ is a well-defined etale space.
+    \item* Show that there is a canonical morphism $i:\mathcal{P}\to \Gamma_{L(\mathcal{P})}$ and it is an isomorphism if $\mathcal{P}$ is a sheaf. Furthermore, $\Gamma_{L(\mathcal{P})}$ is the sheafication of $\mathcal{P}$, i.e. for any sheaf $\mathcal{F}$, we have $\Hom_{PSh}(\mathcal{P},\mathcal{F})\cong \Hom_{Sh}(\Gamma_{L(\mathcal{P})},\mathcal{F})$.
+\end{enumerate}
+
+
+
+
+\end{enumerate}
+
+
+\end{document}
