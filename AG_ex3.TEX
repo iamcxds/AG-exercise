@@ -57,11 +57,12 @@
         \]
     Check that $\Gamma_E$ is a well-defined sheaf on $X$
     \item Let $\mathcal{P}$ be a presheaf on $X$, we define an etale space $(Et(\mathcal{P}),p)$ as follow:
-    \[Et(\mathcal{P})=\coprod _{x\in X} \mathcal{P}_x , p:(x, f\in \mathcal{P}_x) \mapsto x\in X\]
+    \[Et(\mathcal{P})=\coprod _{x\in X} \mathcal{P}_x , p:Et(\mathcal{P})\to X, p(x, s_x\in \mathcal{P}_x)= x\in X\]
     where $\mathcal{P}_x$ is the stalk. And the topology of $Et(\mathcal{P}) $ is given by the basis $\{V_f\}_{f\in \mathcal{P}(U) }$, where 
     \[ V_f=\{(x\in U, f_x \in \mathcal{P}_x)\in Et(\mathcal{P})\}\]
     Check that $Et(\mathcal{P})$ is a well-defined etale space.
-    \item* Show that there is a canonical morphism $i:\mathcal{P}\to \Gamma_{Et(\mathcal{P})}$ and it is an isomorphism if $\mathcal{P}$ is a sheaf. Furthermore, $\Gamma_{Et(\mathcal{P})}$ is the sheafication of $\mathcal{P}$, i.e. for any sheaf $\mathcal{F}$, we have $\Hom_{PSh}(\mathcal{P},\mathcal{F})\cong \Hom_{Sh}(\Gamma_{Et(\mathcal{P})},\mathcal{F})$.
+    \item* Show that there is a canonical morphism $i:\mathcal{P}\to \Gamma_{Et(\mathcal{P})}$ and it is an isomorphism if $\mathcal{P}$ is a sheaf. Furthermore, $\Gamma_{Et(\mathcal{P})}$ is isomorphic to the sheafification of $\mathcal{P}$. (First try to show that $\Gamma_{Et(\mathcal{P})}(U)\subset \prod_{x\in U} \mathcal{P}_x$ and satisfies some conditions)
+    %for any sheaf $\mathcal{F}$, we have $\Hom_{PSh}(\mathcal{P},\mathcal{F})\cong \Hom_{Sh}(\Gamma_{Et(\mathcal{P})},\mathcal{F})$.
 \end{enumerate}
 
 
