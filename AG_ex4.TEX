@@ -1,0 +1,69 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{amsthm,amsmath,amsfonts,epsfig,amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{xy}
+\usepackage{graphics}
+\xyoption{all}
+\pagestyle{empty}
+
+\def\spec#1{\mathrm{Spec}(#1)}
+\def\bb#1{\mathbb{#1}}
+\def\bZ{\mathbb{Z}}
+\def\Zmd#1{\bZ/#1\bZ}
+\def\mrm#1{\mathrm{#1}}
+\def\Hom{\mathrm{Hom}}
+\def\Ab{\mathrm{Ab}}
+\def\Mod#1{#1\mathrm{Mod}}
+\def\PSh{\mathrm{PSh}}
+\DeclareMathOperator{\colim}{colim}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\Spm}{Spm}
+\DeclareMathOperator{\Spec}{Spec}
+
+\newcommand*\pp{{\rlap{\('\)}}}
+
+\begin{document}
+
+
+{\small Algebraic geometry \hfill September 28, 2022 \\}
+\begin{center}
+\Huge Exercises 4
+\end{center}
+
+\vskip0.6cm
+\footnote{find also these exercises on https://github.com/iamcxds/AG-exercise, you can skip the question with * if it is difficult.}
+
+\begin{enumerate}[1.]
+\item Let $f: X\to Y$ be a continuous map between topological spaces, $\mathcal{F}$ and $\mathcal{G}$ are sheaves over $X$ and $Y$ respectively.
+\begin{enumerate}
+    \item Let the direct image $f_* \mathcal{F}$ be the presheaf over $Y$, s.t. $f_* \mathcal{F}(U):=\mathcal{F}(f^{-1}(U))$. Check that this is already a sheaf and $f_*: Sh(X)\to Sh(Y)$ defines a functor.
+    \item Let the inverse image $f^*\mathcal{G}$ be the sheafification of presheaf $\mathcal{G}(f(U))$ over $X$. Show that $f^*\mathcal{G}_x\cong \mathcal{G}_{f(x)} $ and $f^*: Sh(Y)\to Sh(X)$ defines a functor.
+    \item When $Y=*$ is a point, and to define a sheaf $\mathcal{G}$ over $*$ is equivalence to give the set $G=\mathcal{G}(*)$. Show that $f_* \mathcal{F}=\mathcal{F}(X)$ and $f^*G=\underline{G} $ the const sheaf.
+    \item Let $x\in X$, and it induces a map$x: *\to X$. Show that $x^* \mathcal{F}=\mathcal{F}_x$ and $x_*G= G_{\{x\}} $ the skyscraper sheaf supported on $\{x\}$(i.e. $G_{\{x\}}(U)=G$ if $x\in U$ and $*$ otherwise ).
+    \item* Show that there is an isomorphism 
+    \[ \Hom_{Sh(X)}(f^*\mathcal{G},\mathcal{F})\cong \Hom_{Sh(Y)}(\mathcal{G},f_*\mathcal{F})\]
+\end{enumerate}
+\item* Let $\mathcal{F},\mathcal{G}\in Sh(X)$ and let $i:\mathcal{F}\to\mathcal{G} $ be a morphism s.t. $ \forall x\in X, i_x:\mathcal{F}_x\to\mathcal{G}_x$ are isomorphisms. Show that $i$ is an isomorphism of sheaves. (Hint: first show that $i$ induces a homogeneous between etale space $Et(i):Et(\mathcal{F})\to Et(\mathcal{G})$)
+\item We define the (pre)sheaf $\mathcal{F}$ of Abelian group (i.e. Abelian (pre)sheaf) over $X$ by changing the target to $Ab$, i.e. now $\mathcal{F}(U)\in Ab$. We denote $PAb(X)$ and $Ab(X)$ as the category of Abelian presheaf and sheaf. And for a sequence in $PAb(X)$ (resp. $Ab(X)$) 
+\[ \mathcal{F}\to\mathcal{G}\to\mathcal{H}\]
+we say it is exact if $\forall U$ open,
+\[ \mathcal{F}(U)\to\mathcal{G}(U)\to\mathcal{H}(U)\]  
+(resp. $\forall x\in X$, \[ \mathcal{F}_x\to\mathcal{G}_x\to\mathcal{H}_x\]) are exact.
+\begin{enumerate}
+    \item Show that the exactness of presheaf implies the exactness of sheaf. (Hint: taking stalk $\colim_{x\in U}\mathcal{F}(U)$ is a filtered colimit)
+    \item Let $X=\bb{C}$, show that 
+    \[0\to \underline{\bZ}\xrightarrow{2\pi i}\mathcal{O}\xrightarrow{\exp} \mathcal{O}^*\to 0\]
+    is a exact sequence of Abelian sheaves, where $\mathcal{O}$ (resp. $\mathcal{O}^*$) is the sheaf of holomorphic functions (resp. non-vanishing holomorphic functions). But by considering the sections on $\bb{C}^* \subset \bb{C}$, show that this is not exact as presheaf.
+    \item Let $\underline{\bZ}\in Ab(X)$ be the const sheaf, and let $x\in X$ 
+\end{enumerate}
+
+\item Let $X=[0,1]$ and let $C(X)$ be the ring of real-valued functions on $X$.Recall that the maximal spectrum $\Spm(R)$ is the subspace of $\Spec(R)$ consisting of maximal ideals. We will show that $\Spm(C(X))$ is homogeneous to $X$.
+
+
+\end{enumerate}
+
+
+\end{document}
