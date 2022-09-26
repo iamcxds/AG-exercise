@@ -41,12 +41,12 @@
 \begin{enumerate}
     \item Let the direct image $f_* \mathcal{F}$ be the presheaf over $Y$, s.t. $f_* \mathcal{F}(U):=\mathcal{F}(f^{-1}(U))$. Check that this is already a sheaf and $f_*: Sh(X)\to Sh(Y)$ defines a functor.
     \item Let the inverse image $f^*\mathcal{G}$ be the sheafification of presheaf $\mathcal{G}(f(U))$ over $X$. Show that $f^*\mathcal{G}_x\cong \mathcal{G}_{f(x)} $ and $f^*: Sh(Y)\to Sh(X)$ defines a functor.
-    \item When $Y=*$ is a point, and to define a sheaf $\mathcal{G}$ over $*$ is equivalence to give the set $G=\mathcal{G}(*)$. Show that $f_* \mathcal{F}=\mathcal{F}(X)$ and $f^*G=\underline{G} $ the const sheaf.
-    \item Let $x\in X$, and it induces a map$x: *\to X$. Show that $x^* \mathcal{F}=\mathcal{F}_x$ and $x_*G= G_{\{x\}} $ the skyscraper sheaf supported on $\{x\}$(i.e. $G_{\{x\}}(U)=G$ if $x\in U$ and $*$ otherwise ).
+    \item When $Y=*$ is a point,to define a sheaf $\mathcal{G}$ over $*$ is equivalent to give the set $G=\mathcal{G}(*)$. Show that $f_* \mathcal{F}=\mathcal{F}(X)$ and $f^*G=\underline{G} $ the const sheaf.
+    \item For any $x\in X$ induces a map$x: *\to X$. Show that $x^* \mathcal{F}=\mathcal{F}_x$ and $x_*G= G_{\{x\}} $ the skyscraper sheaf supported on $\{x\}$(i.e. $G_{\{x\}}(U)=G$ if $x\in U$ and $*$ otherwise ).
     \item* Show that there is an isomorphism 
     \[ \Hom_{Sh(X)}(f^*\mathcal{G},\mathcal{F})\cong \Hom_{Sh(Y)}(\mathcal{G},f_*\mathcal{F})\]
 \end{enumerate}
-\item* Let $\mathcal{F},\mathcal{G}\in Sh(X)$ and let $i:\mathcal{F}\to\mathcal{G} $ be a morphism s.t. $ \forall x\in X, i_x:\mathcal{F}_x\to\mathcal{G}_x$ are isomorphisms. Show that $i$ is an isomorphism of sheaves. (Hint: first show that $i$ induces a homogeneous between etale space $Et(i):Et(\mathcal{F})\to Et(\mathcal{G})$)
+\item* Let $\mathcal{F},\mathcal{G}\in Sh(X)$ and let $i:\mathcal{F}\to\mathcal{G} $ be a morphism s.t. $ \forall x\in X, i_x:\mathcal{F}_x\to\mathcal{G}_x$ are isomorphisms. Show that $i$ is an isomorphism of sheaves. (Hint: first show that $i$ induces a homeomorphism between etale space $Et(i):Et(\mathcal{F})\to Et(\mathcal{G})$)
 \item We define the (pre)sheaf $\mathcal{F}$ of Abelian group (i.e. Abelian (pre)sheaf) over $X$ by changing the target to $Ab$, i.e. now $\mathcal{F}(U)\in Ab$. We denote $PAb(X)$ and $Ab(X)$ as the category of Abelian presheaf and sheaf. And for a sequence in $PAb(X)$ (resp. $Ab(X)$) 
 \[ \mathcal{F}\to\mathcal{G}\to\mathcal{H}\]
 we say it is exact if $\forall U$ open,
@@ -57,12 +57,12 @@ we say it is exact if $\forall U$ open,
     \item Let $X=\bb{C}$, show that 
     \[0\to \underline{\bZ}\xrightarrow{2\pi i}\mathcal{O}\xrightarrow{\exp} \mathcal{O}^*\to 0\]
     is a exact sequence of Abelian sheaves, where $\mathcal{O}$ (resp. $\mathcal{O}^*$) is the sheaf of holomorphic functions (resp. non-vanishing holomorphic functions). But by considering the sections on $\bb{C}^* \subset \bb{C}$, show that this is not exact as presheaf.
-    \item Let $\underline{\bZ}\in Ab(X)$ be the const sheaf, and for $x\in X$, let $\bZ_{\{x\}}$ be the skyscraper sheaf. and let $\bZ_{X-\{x\}}$ be the sheaf s.t. $ \bZ_{X-\{x\}}(U)=\bZ$ if $x\notin U$, and $0$ otherwise. Show that there is exact sequence of sheaf 
+    \item Let $\underline{\bZ}\in Ab(X)$ be the const sheaf, and for close point $x\in X$, let $\bZ_{\{x\}}$ be the skyscraper sheaf. and let $\bZ_{X-\{x\}}$ be the sheaf s.t. $ \bZ_{X-\{x\}}(U)=\bZ$ if $x\notin U$, and $0$ otherwise. Show that there is exact sequence of sheaf 
     \[0\to\bZ_{X-\{x\}}\to \underline{\bZ}\to \bZ_{\{x\}}\to 0 \]
-    But show that $\underline{\bZ}$ are \textbf{not} isomorphic to $\mathcal{B}=\bZ_{X-\{x\}}\oplus \bZ_{\{x\}} $, even if there are isomorphisms $\forall x, \underline{\bZ}_x\cong \bZ\cong \mathcal{B}_x$.
+    But then show that $\underline{\bZ}$ is \textbf{not} isomorphic to $\mathcal{B}=\bZ_{X-\{x\}}\oplus \bZ_{\{x\}} $, even if there are isomorphisms $\forall x, \underline{\bZ}_x\cong \bZ\cong \mathcal{B}_x$.
 \end{enumerate}
 
-\item Let $X=[0,1]$ and let $C(X)$ be the ring of real-valued functions on $X$.Recall that the maximal spectrum $\Spm(R)$ is the subspace of $\Spec(R)$ consisting of maximal ideals. We will show that $\tilde{X}=\Spm(C(X))$ is homogeneous to $X$.
+\item Let $X=[0,1]$ and let $C(X)$ be the ring of real-valued functions on $X$.Recall that the maximal spectrum $\Spm(R)$ is the subspace of $\Spec(R)$ consisting of maximal ideals. We will show that $\tilde{X}=\Spm(C(X))$ is homeomorphic to $X$.
 \begin{enumerate}
     \item For $x\in X$, let maximal ideals $\mathfrak{m}_x=\{f\in C(X),s.t. f(x)=0\}$. Now for any ideal $I \subsetneq  C(X)$, let $V_X(I)=\{x\in X, s.t. f(x)=0, \forall f\in I\}$. Show that $V_X(I)$ is nonempty and thus for $x\in V_X(I),I\subset \mathfrak{m}_x$. Therefore $\mathfrak{m}_{-}:X\to \tilde{X}$ is surjective.
     \item By construction functions separate the points of $X$, conclude that $\mathfrak{m}_{-}: X\to \tilde{X}$ is injective.
