@@ -1,0 +1,63 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{amsthm,amsmath,amsfonts,epsfig,amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{xy}
+\usepackage{graphics}
+\xyoption{all}
+\pagestyle{empty}
+
+\def\spec#1{\mathrm{Spec}(#1)}
+\def\bb#1{\mathbb{#1}}
+\def\bZ{\mathbb{Z}}
+\def\Zmd#1{\bZ/#1\bZ}
+\def\mrm#1{\mathrm{#1}}
+\def\Hom{\mathrm{Hom}}
+\def\Ab{\mathrm{Ab}}
+\def\Mod#1{#1\mathrm{Mod}}
+\def\PSh{\mathrm{PSh}}
+\DeclareMathOperator{\colim}{colim}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\Spm}{Spm}
+\DeclareMathOperator{\Spec}{Spec}
+
+\newcommand*\pp{{\rlap{\('\)}}}
+
+\begin{document}
+
+
+{\small Algebraic geometry \hfill October 5, 2022 \\}
+\begin{center}
+\Huge Exercises 4
+\end{center}
+
+\vskip0.6cm
+\footnote{find also these exercises on https://github.com/iamcxds/AG-exercise, you can skip a question with * if it is difficult.}
+
+\begin{enumerate}[1.]
+
+\item For any topological space $ X $, we think of it as a ringed space, with the structure sheaf $C^0(U)=\{f: U\to \bb{R},continuous \}$ of continuous functions.
+\begin{enumerate}
+    \item Show that $(X, C^0)$ is a locally ringed space, and any continuous map $f: X\to Y$ induces a morphism of locally ringed spaces $ (f,f^\#) : (X,C^0)\to (Y,C^0) $
+    
+    \item Let $X=[0,1]$ for multiplicative system $S_U=\{f\in C^0(X), s.t. \forall x\in U, f(x)\neq 0 \}$. Then show that there is an isomorphism $S_U^{-1}C^0(X)\cong C^0(U)$, thus $\Spm C^0(X)\cong (X, C^0)$ as locally ringed spaces.
+    \item Let $X=\bb{R}^n, Y=\bb{R}^m$(or more generally differential manifolds), we can define the structure to be  $C^{\infty}(U)=\{f: U\to \bb{R}, smooth\}$. Show that any smooth map $f: X\to Y$ induces a morphism of locally ringed spaces $ (f,f^\#) : (X,C^{\infty})\to (Y,C^{\infty}) $
+    \item Let $X=\bb{R}^1, Y=\bb{R}^2$, let $f: X\to Y $ be $f(t)=(t,|t|)$. Verify that $f$ only induces morphism between $ (X,C^0)\to (Y,C^0)$ rather than $ (X,C^{\infty})\to (Y,C^{\infty})$. (Actually, $f$ is smooth, iff it induces $ (f,f^\#) : (X,C^{\infty})\to (Y,C^{\infty}) $ )
+\end{enumerate}
+\item Let $LRS$ be the category of locally ringed space. And let $(X,\Gamma)$ be a locally ringed space and $R$ be a ring.
+\begin{enumerate}
+    \item Show that there is a canonical map \\ $\Hom_{LRS}(X,\Spec R) \to \Hom_{Ring}(R,\Gamma(X)) $.
+    \item Let $f\in \Gamma(X)$, and let $D(f)=\{x\in X, s.t. f_x \in \Gamma_x$ is invertible$\}$. Show that $D(f)$ is open in $X$.
+    \item Recall the fact that for local ring $A$, the $A\backslash \mathfrak{m}= A^*$. Show that $V(f)=\{x\in X, s.t. f_x \in \mathfrak{m}_x\subset \Gamma_x\}$ is closed in $X$.
+    \item For $x\in X$, let $I_x =\{f\in \Gamma(X), s.t. f_x \in \mathfrak{m}_x\subset \Gamma_x \}$. Show that $I_x$ is a prime ideal of $ \Gamma(X)$. Construct a canonical morphism $i\in \Hom_{LRS}(X,\Spec \Gamma(X))$. (Generally, $i$ is not injective nor surjective)
+    \item Let $h\in \Hom_{Ring}(R,\Gamma(X))$, and let $\mu(h)(x\in X)=h^{-1}(I_x)\in \Spec R$. Show that $\mu(h)$ induces a morphism $\in \Hom_{LRS}(X,\Spec R)$.
+    \item Show that there is a bijection $\Hom_{Ring}(R,\Gamma(X))\cong \Hom_{LRS}(X,\Spec R)$
+\end{enumerate}
+
+
+\end{enumerate}
+
+
+\end{document}
