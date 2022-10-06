@@ -1,0 +1,69 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{amsthm,amsmath,amsfonts,epsfig,amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{xy}
+\usepackage{graphics}
+\xyoption{all}
+\pagestyle{empty}
+
+\def\spec#1{\mathrm{Spec}(#1)}
+\def\bb#1{\mathbb{#1}}
+\def\bZ{\mathbb{Z}}
+\def\Zmd#1{\bZ/#1\bZ}
+\def\mrm#1{\mathrm{#1}}
+\def\Hom{\mathrm{Hom}}
+\def\Ab{\mathrm{Ab}}
+\def\Mod#1{#1\mathrm{Mod}}
+\def\PSh{\mathrm{PSh}}
+\DeclareMathOperator{\colim}{colim}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\Spm}{Spm}
+\DeclareMathOperator{\Spec}{Spec}
+
+\newcommand*\pp{{\rlap{\('\)}}}
+
+\begin{document}
+
+
+{\small Algebraic Geometry \hfill October 12, 2022 \\}
+\begin{center}
+\Huge Exercises 6
+\end{center}
+
+\vskip0.6cm
+\footnote{find also these exercises on https://github.com/iamcxds/AG-exercise, you can skip a question with * if it is difficult.}
+
+\begin{enumerate}[1.]
+\item (Gluing 3 schemes) Let $X_i, i=1,2,3$ be three schemes. And for pairs $i,j$, there are open subsets $U_{ij}$ and isomorphisms $\varphi_{ij}:U_{ij}\overset {\sim }{\to} U_{ji}$. Now, if the isomorphisms are compatible in the sense: for each $i,j,k$,
+\begin{enumerate}[(1)]
+    \item $\varphi_{ij}=\varphi_{ji}^{-1}$,
+    \item $\varphi_{ij}(U_{ij}\cap U_{ik})=U_{ji}\cap U_{jk}$,
+    \item $\varphi_{jk}\circ \varphi_{ij}=\varphi_{ik}$ on $U_{ij}\cap U_{ik}$,
+\end{enumerate}
+then there exists a scheme $X$, as gluing of $X_i$.
+\item Let $\bb{R}\bb{P}^n$ be the topological space constructed by quotient $\bb{R}^n\backslash 0$ with $\bb{R}^*$. And let $\bb{P}^n$ be the scheme of projective space. Recall a section of $p:A\to B$ is a morphism $f:B\to A \ s.t \ p\circ f =\mrm{id}$.
+\begin{enumerate}
+    \item Let $s:\bb{R}^n\backslash 0 \to \bb{R}\bb{P}^n$ be the obvious projection. Show that $s$ has no section.
+    \item Let $D_+(x_i)_n$ be the open subscheme of $\bb{P}^n$. Define  morphisms $s: D_{x_i}\subset \bb{A}^n\backslash 0 \to D_+(x_i)_n$ induced by 
+    \[ s^\#: \bZ[\frac{x_0}{x_i},\ldots \frac{x_n}{x_i}]\to \bZ[x_0,\ldots,x_n][x_i^{-1}],  \frac{x_j}{x_i} \mapsto x_jx_i^{-1}\]
+    Show that we can glue $s$ into morphism $s: \bb{A}^n\backslash 0 \to \bb{P}^n$. Then show that $s$ has no section.
+    \item Let $i:\bb{R}\bb{P}^1\to \bb{R}\bb{P}^2\backslash[0,0,1] $ by $i([x,y])=[x,y,0]$ and
+    \\ $p:\bb{R}\bb{P}^2\backslash[0,0,1]\to\bb{R}\bb{P}^1$ by $p([x,y,z])=[x,y]$. Check there are well-defined map, $i$ is a section of $p$ and $p^{-1}(t\in \bb{R}\bb{P}^1)\cong \bb{R}^1$. Then show that $\bb{R}\bb{P}^2\backslash[0,0,1]$ is homeomorphic to a Mobius band.
+    \item  For $n\leq m$, we define morphisms $i: D_+(x_i)_n\to D_+(x_i)_m, p:D_+(x_i)_n\to D_+(x_i)_m$ induced by 
+    \[i^\#:\bZ[\frac{x_0}{x_i},\ldots \frac{x_m}{x_i}]\to \bZ[\frac{x_0}{x_i},\ldots \frac{x_n}{x_i}],  \frac{x_j}{x_i} \mapsto \frac{x_j}{x_i}, j\leq n; 0 , j>n \]
+    \[p^\#:\bZ[\frac{x_0}{x_i},\ldots \frac{x_n}{x_i}]\to \bZ[\frac{x_0}{x_i},\ldots \frac{x_m}{x_i}],  \frac{x_j}{x_i} \mapsto \frac{x_j}{x_i}\] 
+    Show that we can glue $i,p$ into morphisms 
+    \[i:\bb{P}= D_+(x_0)_n\cup \ldots \cup D_+(x_n)_n \to U_{n,m}= D_+(x_0)_m\cup \ldots  \cup D_+(x_n)_m \subset \bb{P}^m \]
+    and $p:U_{n,m}\to \bb{P}$.
+    \item* Show that sections of $p:U_{1,2}\to \bb{P}^1$ correspond to linear polynomials $\{ ax+b \}$
+\end{enumerate}
+
+
+
+\end{enumerate}
+
+
+\end{document}
