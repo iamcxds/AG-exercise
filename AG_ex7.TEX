@@ -6,6 +6,7 @@
 \usepackage{enumerate}
 \usepackage{xy}
 \usepackage{graphics}
+\usepackage{comment}
 \xyoption{all}
 \pagestyle{empty}
 
@@ -28,13 +29,15 @@
 \begin{document}
 
 
-{\small Algebraic Geometry \hfill November 16, 2022 \\}
+{\small Algebraic Geometry
+\footnote{find also these exercises on https://github.com/iamcxds/AG-exercise, you can skip a question with * if it is difficult.}
+ \hfill November 16, 2022 \\}
 \begin{center}
 \Huge Exercises 7
 \end{center}
 
 \vskip0.6cm
-\footnote{find also these exercises on https://github.com/iamcxds/AG-exercise, you can skip a question with * if it is difficult.}
+
 
 \begin{enumerate}[1.]
 \item(Segre embedding) 
@@ -59,17 +62,20 @@
     \item Let $X,Y,Z$ be sets with maps $f:X\to Z,g:Y\to Z$. Show that we have fiber product in $\mathrm{Set}$, and
     \[X \times_Z Y=\{(x,y)\in X \times Y | f(x)=g(y)\in Z \}\]
     And let $p:X \times_Z Y\to Z, (x,y)\mapsto f(x)$ be the canonical projection. Then show that for all $z\in Z, p^{-1}(z)=f^{-1}(z)\times g^{-1}(z)$. 
-    \item Let $U,V$ be open subscheme of scheme $S$. Show that $U\times_S V=U\cap V$
-    \item Let $k$ be a field, and let $L$ be its finite separate extension. Show that $\Spec L \times_k \Spec L \cong \sqcup_{[k:L]}\Spec k$
+    \item Let $U,V$ be open subschemes of scheme $S$. Show that $U\times_S V=U\cap V$
+    \item Let $k$ be a field, and let $L$ be its finite separate extension. Show that $\Spec L \times_k \Spec L \cong \sqcup_{[k:L]}\Spec L$
     \item* Assume $k$ is algebraic closed, let $k(x)$ be the field of fractions of $k[x]$, show that the underlying set of
     $\Spec k(x) \times_k \Spec k(y)$ is isomorphic to
-    \[ \{\mathfrak{p}\in\bb{A}^2| \mathrm{ht}(\mathfrak{p})=0\ \mathrm{or}\ 1, \mathfrak{p}\neq (x-c),\mathfrak{p}\neq(y-c)\}\]
+    \[ \{\mathfrak{p}\in\bb{A}^2| \mathrm{ht}(\mathfrak{p})=0\ \mathrm{or}\ 1,\mrm{and\ }\forall c\in k, \mathfrak{p}\neq (x-c),\mathfrak{p}\neq(y-c)\}\]
 \end{enumerate}
+
+\begin{comment}
 \item Let $A\to B$ be a integral extension, and let $\mathfrak{p}$ be a prime ideal of $B$
 \begin{enumerate}
-    \item Show that for any prime ideal $\mathfrak{q}$ of $B$ such that $\mathfrak{p}\cap A\subset\mathfrak{q}\subset \mathfrak{p}, \mathfrak{q}= \mathfrak{p}$
+    \item Show that for any prime ideal $\mathfrak{q}$ of $B$ such that $\mathfrak{p}\cap A\subset\mathfrak{q}\subset \mathfrak{p}$, then $\mathfrak{q}= \mathfrak{p}$
     \item* Use induction to show that $\mathrm{ht}(\mathfrak{p}\subset B)=\mathrm{ht}(\mathfrak{p}\cap A\subset A)$
 \end{enumerate}
+\end{comment}
 
 \end{enumerate}
 
