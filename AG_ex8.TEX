@@ -42,8 +42,14 @@
 \begin{enumerate}[1.]
 
 \item (Functor of points)
+Recall the Yoneda lemma: An object $X$ is decided by the functor $\Hom(-, X)$. Conversely, from a functor $F$, we can try to find the object that represents it. (e.g. we have seen that the line bundles with $n+1$ section over $X$ is represented by $\bb{P}^n$)
 \begin{enumerate}
-    \item 
+    \item For a set $S$, let $P(S)$ be the set of subsets. Can you find the set that represents $P$? (i.e. find such set $B$ s.t. $P(S)\cong \Hom_{\mrm{Set}}(S,B)$) 
+    \item For a polynomial $f\in \bb{Z}[x,y]$. Let $h_f(\Spec R)=\{(x,y)\in R, f(x,y)=0\}$. Can you find the scheme that represents $h_f$?
+    \item For any scheme $X$, denote $X(R)$ for the $\Hom_{\mrm{Sch}}(\Spec R, X)$. which is the functor of points. If $X$ is a variety over an algebraically close field $k$, then show that $X(k)$ corresponds to the set of close points.
+    \item If $X$ is a variety over $\bb{C}$, then show that there is a $\bb{Z}/2\bb{Z}$ action on $X(\bb{C})$, And the fix points are corresponds to $X(\bb{R})$
+    \item Show that $X\times_Z Y(R)\cong X(R)\times_{Z(R)} Y(R)$. So we can define the fiber product $X\times_Z Y$as the scheme represents $  X(R)\times_{Z(R)} Y(R) $. But how can we find such a scheme?\footnote{see more on https://stacks.math.columbia.edu/tag/01JF}
+    
 \end{enumerate}
 \item* For topological space $X$, show that $X$ is proper (i.e. $X\times Y\to Y$ is closed for any $Y$) iff $X$ is compact. (More generally, for proper map $f:X\to Y$, for $y\in Y$, we have the fibre $f^{-1}(y)$ is compact)
 \item* Recall the fact that holomorphic functions on compact Riemann surfaces are constant. Let $k$ be an algebraically closed field, and let  $X$ be a connected reduced proper $k$-scheme. Then $\mathcal{O}_X(X)=k$.
